@@ -16,7 +16,7 @@ describe('Traversing DOM elements in Cypress', () => {
 		cy.get('.traversal-drinks-list > *').eq(2).should('contain', 'Milk')
 	});
 
-	it.only('filter() to retrieve DOM elements that match a specific selector', () => {
+	it('filter() to retrieve DOM elements that match a specific selector', () => {
 		cy.get('.btn-group-toggle > *').filter('.active').should('contain', 'Button-1')
 	});
 
@@ -64,7 +64,7 @@ describe('Traversing DOM elements in Cypress', () => {
 		cy.get('#veggie').prevUntil('#fruits').should('have.length', 5)
 	});
 
-	it('siblings() To get all sibling DOM elements of elements', () => {
+	it.only('siblings() To get all sibling DOM elements of elements', () => {
 		cy.get('.traversal-button-other-states .active').siblings().should('have.length', 3)
 	});
 });
